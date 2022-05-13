@@ -1,0 +1,111 @@
+.header{
+  position: relative;
+  height: 84px;
+  background-color: rgba(0, 0, 0, .8);
+  z-index: 9;
+}
+.header .area{
+  height: 84px;
+  justify-content: space-between;
+}
+.header  .header-logo a{
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  display: block;
+  width: 200px;
+  height: 54px;
+  text-indent: -999px;
+  background: url(../image/logo.png);
+}
+/* 头部导航部分 header-nav */
+.header-nav ul li .item{
+  padding-top: 20px;
+ display: block;
+ width: 115px;
+ height: 84px;
+ text-align: center;
+ font-size: 18px;
+ color: #c9c9dd;
+}
+.header-nav ul li .item span{
+ display: block;
+ margin-top: 8px;
+ font-size: 12px;
+ color: #858792;
+}
+.header-nav ul li:hover,
+.header-nav ul .active{
+  background: url(../image/mian_spirit.png) no-repeat;
+}
+.header-nav ul li:hover .item,
+.header-nav ul .active .item{
+ color: #e4b653;
+}
+.header-nav ul li:hover .item span,
+.header-nav ul .active .item span{
+ color: #91763f;
+}
+/* 头部搜索 */
+.header-nav .search{
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 27px;
+  height: 26px;
+  margin-left: 5px;
+  background: url(../image/nav_search.png) no-repeat center;
+}
+
+/* 头部登录 */
+.header-login{
+  align-items: center;
+}
+.header-login .pic{
+  margin-right: 5px;
+}
+.header-login .pic img{
+ border: 1px solid #d9ad50;
+ border-radius: 50%;
+}
+.header-login .login-tit{
+  color: #fff;
+}
+.header-login .login-txt{
+ margin-top: 5px;
+  font-size: 14px;
+ color: #858792
+}
+
+.header .dropmeau{
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 0;
+  background-color: rgba(0, 0,0,.7);
+  transition: .3s;
+  overflow: hidden;
+}
+.header:hover .dropmeau{
+  height: 285px;
+}
+.header .dropmeau .inner{
+  display: flex;
+  height: 285px;
+  width: 940px;
+  height: 285px;
+  padding: 15px 0 30px 50px;
+  margin: 0 auto;
+}
+.header .dropmeau .inner-list{
+ width: 115px;
+}
+.header .dropmeau .inner-list a{
+  position: relative;
+  display: block;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  color: #c9c9dd;
+}

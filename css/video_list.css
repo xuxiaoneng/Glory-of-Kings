@@ -1,0 +1,86 @@
+.video_list {
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.video_list_item {
+  width: 212px;
+  margin-bottom: 30px;
+  
+}
+
+.video_list_item .pic {
+  position: relative;
+}
+
+.video_list_item .pic img {
+  width: 100%;
+}
+
+.video_list_item .pic_bottom {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 22px;
+  width: 100%;
+  justify-content: space-between;
+  padding: 0 10px;
+  line-height: 22px;
+  font-size: 12px;
+  background-color: rgba(0, 0, 0, .6);
+  color: #fff;
+}
+
+.video_list_item .pic_bottom .views {
+  padding-left: 18px;
+  background: url(../image/mian_spirit.png) no-repeat -256px -59px;
+}
+
+.video_list_item .mask {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, .6);
+}
+
+.video_list_item:hover .mask {
+  display: block;
+  animation: transit .4s;
+}
+
+@keyframes transit {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.video_list_item .mask i {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  width: 40px;
+  height: 40px;
+  background: url(../image/mian_spirit.png) no-repeat -192px -64px;
+}
+
+.video_list_item .desc {
+  margin-top: 10px;
+  font-size: 14px;
+  line-height: 1.5;
+  /* 只显示两行文本,超出隐藏 */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}

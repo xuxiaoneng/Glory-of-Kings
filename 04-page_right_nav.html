@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./css/base.css">
+  <link rel="stylesheet" href="./css/keyframes.css">
+  <style>
+    .right-nav{
+      position: fixed;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 254px;
+      height: 494px;
+      padding-left: 20px;
+      background: url(./upload/r_navBg.png);
+    }
+    .right-dj{
+      position: relative;
+    }
+    .right-dj span{
+      position: absolute;
+      top: 35px;
+      left: 12px;
+      width: 88px;
+      height: 36px;
+      font-weight: bold;
+      line-height: 18px;
+      color: #62401b;
+      overflow: hidden;
+    }
+    .right-list{
+      position: relative;
+      left: 60px;
+    }
+    .right-list li{
+      position: relative;
+      width: 117px;
+      height: 38px;
+      background: url(./upload/r_all.png) no-repeat;
+    }
+    .right-list .code{
+      height: 116px;
+      text-align: center;
+      background-position: 0 -3px;
+    }
+    .right-list .code img{
+      width: 111px;
+      height: 110px;
+      margin: 3px;
+    }
+    .right-list a{
+      display: block;
+      height: 38px;
+    }
+    .right-list .weibo{
+      background-position: -122px -120px;
+    }
+    .right-list .weibo:hover{
+      background-position: -122px -240px;
+    }
+    .right-list .gzh{
+      background-position: -122px -160px;
+    }
+    .right-list .gzh:hover{
+      background-position: -122px -200px;
+    }
+    .right-list .sph{
+      background-position: -122px 0;
+    }
+    .right-list .sph:hover{
+      background-position:  -122px -42px;
+    }
+    .right-list li .nav-contact{
+      display: none;
+      position: absolute;
+      top: -66px;
+      left: -100%;
+      width: 115px;
+      height: 151px;
+      padding-top: 7px;
+      text-align: center;
+      background: url(./upload/r_all.png) 0 -416px;
+    }
+    .right-list li:hover .nav-contact{
+      display: block;
+      animation: transit 1s;
+    }
+    .right-list li .nav-contact p{
+      margin-top: 5px;
+      line-height: 16px;
+      font-size: 12px;
+      color: #dcdcdc;
+    }
+    .right-list li .nav-contact p span{
+      color: #cd974b;
+    }
+  </style>
+</head>
+<body>
+  <div class="right-nav">
+    <div class="right-dj">
+      <img src="./upload/r_dj.png" alt="">
+      <span>下载王者营地每天领福利~</span>
+    </div>
+    <ul class="right-list">
+      <li class="code">
+        <img src="./upload/r_code.jpg" alt="">
+      </li>
+      <li class="weibo">
+        <a href="##"></a>
+        <div class="nav-contact">
+          <img src="./upload/weibo.webp" alt="">
+          <p>
+            扫码<span>关注官方微博</span><br>
+            获得<span>一手爆料和福利</span>
+          </p>
+        </div>
+      </li>
+      <li class="gzh">
+       <a href="##"></a>
+       <div class="nav-contact">
+        <img src="./upload/weibo.webp" alt="">
+        <p>
+          扫码<span>关注官方微博</span><br>
+          获得<span>一手爆料和福利</span>
+        </p>
+      </div>
+      </li>
+      <li class="sph">
+        <a href="##"></a>
+        <div class="nav-contact">
+          <img src="./upload/weibo.webp" alt="">
+          <p>
+            扫码<span>关注官方微博</span><br>
+            获得<span>一手爆料和福利</span>
+          </p>
+        </div>
+      </li>
+    </ul>
+  </div>
+</body>
+</html>

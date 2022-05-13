@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>头部模块</title>
+  <link rel="stylesheet" href="./css/base.css">
+  <link rel="stylesheet" href="./css/common.css">
+ <style>
+   .header{
+     position: relative;
+     height: 84px;
+     background-color: rgba(0, 0, 0, .8);
+   }
+   .header .area{
+     height: 84px;
+     justify-content: space-between;
+   }
+   .header  .header-logo a{
+     position: relative;
+     top: 50%;
+     transform: translateY(-50%);
+     display: block;
+     width: 200px;
+     height: 54px;
+     text-indent: -999px;
+     background: url(./image/logo.png);
+   }
+   /* 头部导航部分 header-nav */
+   .header-nav ul li .item{
+     padding-top: 20px;
+    display: block;
+    width: 115px;
+    height: 84px;
+    text-align: center;
+    font-size: 18px;
+    color: #c9c9dd;
+   }
+   .header-nav ul li .item span{
+    display: block;
+    margin-top: 8px;
+    font-size: 12px;
+    color: #858792;
+   }
+   .header-nav ul li:hover,
+   .header-nav ul .active{
+     background: url(./image/mian_spirit.png) no-repeat;
+   }
+   .header-nav ul li:hover .item,
+   .header-nav ul .active .item{
+    color: #e4b653;
+   }
+   .header-nav ul li:hover .item span,
+   .header-nav ul .active .item span{
+    color: #91763f;
+   }
+   /* 头部搜索 */
+   .header-nav .search{
+     position: relative;
+     top: 50%;
+     transform: translateY(-50%);
+     width: 27px;
+     height: 26px;
+     margin-left: 5px;
+     background: url(./image/nav_search.png) no-repeat center;
+   }
+
+   /* 头部登录 */
+   .header-login{
+     align-items: center;
+   }
+   .header-login .pic{
+     margin-right: 5px;
+   }
+   .header-login .pic img{
+    border: 1px solid #d9ad50;
+    border-radius: 50%;
+   }
+   .header-login .login-tit{
+     color: #fff;
+   }
+   .header-login .login-txt{
+    margin-top: 5px;
+     font-size: 14px;
+    color: #858792
+   }
+  
+   .header .dropmeau{
+     position: absolute;
+     top: 100%;
+     left: 0;
+     width: 100%;
+     height: 0;
+     background-color: rgba(0, 0,0,.7);
+     transition: .3s;
+     overflow: hidden;
+   }
+   .header:hover .dropmeau{
+     height: 285px;
+   }
+   .header .dropmeau .inner{
+     display: flex;
+     height: 285px;
+     width: 940px;
+     height: 285px;
+     padding: 15px 0 30px 50px;
+     margin: 0 auto;
+   }
+   .header .dropmeau .inner-list{
+    width: 115px;
+   }
+   .header .dropmeau .inner-list a{
+     position: relative;
+     display: block;
+     height: 30px;
+     line-height: 30px;
+     text-align: center;
+     color: #c9c9dd;
+   }
+ </style>
+</head>
+<body>
+  <div class="header">
+    <div class="header_wraper area flex">
+      <h1 class="header-logo"><a href="##">王者荣耀</a></h1>
+      <div class="header-nav flex">
+        <ul class="flex">
+          <li class="active">
+            <a href="##" class="item">
+              游戏资料
+              <span>DATA</span>
+            </a>
+          </li>
+          <li>
+            <a href="##" class="item">
+              游戏资料
+              <span>DATA</span>
+            </a>
+          </li>
+          <li>
+            <a href="##" class="item">
+              游戏资料
+              <span>DATA</span>
+            </a>
+          </li>
+          <li>
+            <a href="##" class="item">
+              游戏资料
+              <span>DATA</span>
+            </a>
+          </li>
+          <li>
+            <a href="##" class="item">
+              游戏资料
+              <span>DATA</span>
+            </a>
+          </li>
+          <li>
+            <a href="##" class="item">
+              游戏资料
+              <span>DATA</span>
+            </a>
+          </li>
+          <li>
+            <a href="##" class="item">
+              游戏资料
+              <span>DATA</span>
+            </a>
+          </li>
+        </ul>
+        <a href="##" class="search"></a>
+      </div>
+      <div class="header-login flex">
+        <a href="##" class="pic">
+          <img src="./upload/下载.png" alt="">
+        </a>
+        <div>
+          <a href="##" class="login-tit">欢迎登录</a>
+          <p class="login-txt">登陆后查看游戏战绩</p>
+        </div>
+      </div>
+    </div>
+    <div class="dropmeau">
+      <div class="inner">
+        <div class="inner-list">
+          <a href="##">
+            <i class="inner_icon icon_h"></i>
+            版本介绍
+          </a>
+          <a href="##">版本介绍</a>
+          <a href="##">版本介绍</a>
+          <a href="##">版本介绍</a>
+          <a href="##">版本介绍</a>
+          <a href="##">
+            <i class="inner_icon icon_h"></i>
+            世界观体验站
+          </a>
+        </div>
+        <div class="inner-list">
+          <a href="##" >
+            <i class="inner_icon icon_h"></i>
+            版本介绍
+          </a>
+          <a href="##">版本介绍</a>
+          <a href="##">
+            <i class="inner_icon icon_n"></i>
+            爆料站
+          </a>
+          <a href="##">版本介绍</a>
+          <a href="##" >版本介绍</a>
+          <a href="##" >版本介绍</a>
+        </div>
+        <div class="inner-list">
+          <a href="##">版本介绍</a>
+          <a href="##">版本介绍</a>
+          <a href="##">版本介绍</a>
+          <a href="##">版本介绍</a>
+          <a href="##">
+            <i class="inner_icon icon_guard"></i>
+            版本介绍
+          </a>
+          <a href="##">版本介绍</a>
+        </div>
+        <div class="inner-list">
+          <a href="##">版本介绍</a>
+          <a href="##">版本介绍</a>
+          <a href="##">版本介绍</a>
+          <a href="##">版本介绍</a>
+          <a href="##">
+            <i class="inner_icon icon_guard"></i>
+            版本介绍
+          </a>
+          <a href="##">版本介绍</a>
+        </div>
+        <div class="inner-list">
+          <a href="##">
+            <i class="inner_icon icon_n"></i>
+            版本介绍
+          </a>
+          <a href="##">版本介绍</a>
+          <a href="##">版本介绍</a>
+          <a href="##">
+            <i class="inner_icon icon_h"></i>
+            版本介绍
+          </a>
+          <a href="##">版本介绍</a>
+          <a href="##">版本介绍</a>
+        </div>
+        <div class="inner-list">
+          <a href="##">版本介绍</a>
+          <a href="##">版本介绍</a>
+          <a href="##">版本介绍</a>
+          <a href="##">版本介绍</a>
+          <a href="##">版本介绍</a>
+          <a href="##">版本介绍</a>
+        </div>
+        <div class="inner-list">
+          <a href="##" >
+            <i class="inner_icon icon_h"></i>
+            版本介绍
+          </a>
+          <a href="##">版本介绍</a>
+          <a href="##">
+            <i class="inner_icon icon_n"></i>
+            爆料站
+          </a>
+          <a href="##">版本介绍</a>
+          <a href="##" >版本介绍</a>
+          <a href="##" >版本介绍</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

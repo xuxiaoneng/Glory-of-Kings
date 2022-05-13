@@ -1,0 +1,26 @@
+body{
+    font: 14px/1.5 "Microsoft YaHei",Tahoma,"simsun",sans-serif;
+}
+body,div,ul,ol,li,p,h1,h2,h3,h4,h5,a{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ul,
+ol,
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: #333;
+}
+i{
+    font-style: normal;
+}
+input{
+    outline: none;
+}
+img{
+    vertical-align: top;
+}

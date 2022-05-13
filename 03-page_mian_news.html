@@ -1,0 +1,893 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>王者荣耀主体部分</title>
+  <link rel="stylesheet" href="./css/base.css">
+  <link rel="stylesheet" href="./css/common.css">
+  <link rel="stylesheet" href="./css/video_list.css">
+  <style>
+
+    /* 新闻模块 */
+    .news-section{
+      height: 342px;
+      background: url(./upload/rotate_bg.png) no-repeat;
+    }
+    .news-section .banner{
+      width: 605px;
+      overflow: hidden;
+    }
+    .news-section .banner-top li{
+      flex-shrink: 0;
+      width: 100%;
+    }
+    .news-section .banner-top .item{
+      display: block;
+      width: 604px;
+    }
+    .news-section .banner-top .item img{
+      width: 100%;
+    }
+    .news-section .banner-bottom{
+      align-items: center;
+      width: 100%;
+    }
+    .news-section .banner-bottom .item{
+      height: 44px;
+      flex: 1;
+      text-align: center;
+      line-height: 44px;
+      font-size: 14px;
+      color: #b1b2be;
+    }
+    .news-section .banner-bottom .item:hover,
+    .news-section .banner-bottom .item.active{
+      color: #f3c258;
+      background-color: rgba(255,255,255,.15);
+    }
+    .news-section .news{
+     flex: 1;
+     padding: 0 17px;
+     overflow: hidden;
+    }
+    .news-section .title-news{
+      height: 49px;
+      align-items: center;
+      border-bottom: 1px solid #000;
+    }
+    .news-section .title-news a{
+      flex: 1;
+      height: 49px;
+      line-height: 49px;
+      font-size: 14px;
+      text-align: center;
+      color: #b8b9c5;
+      transition: .15s;
+    }
+    .news-section .title-news a.more{
+      line-height: 40px;
+    }
+    .news-section .title-news a:not(:last-child):hover,
+    .news-section .title-news a.active{
+      color: #f3c258;
+      border-bottom: 3px solid #f3c258;
+    }
+    .news-section .notice{
+      margin-top: 18px;
+      margin-bottom: 14px;
+      padding: 0 15px;
+      height: 36px;
+      line-height: 36px;
+      background: #414046;
+    }
+    .news-section .notice a{
+      display: block;
+      width: 230px;
+      font-size: 18px;
+      color: #f3c258;
+      
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+
+    .news-section .news-list .item{
+      display: flex;
+      align-items: center;
+      margin-bottom: 11px;
+    }
+    .news-section .news-list .item a{
+    flex: 1;
+    padding-right: 20px;
+    font-size: 14px;
+    color: #b8b9c5;
+    }
+    .news-section .news-list .item span{
+    font-size: 12px;
+    color: #999;
+    }
+    .news-section .download{
+      width: 236px;
+    }
+    .news-section .download a{
+      display: block;
+      background: url(./image/mian_spirit.png) no-repeat;
+    }
+    .news-section .download a.download-btn{
+     height: 128px;
+     background-position: 0 -219px;
+    }
+    .news-section .download a.guard-btn{
+     height: 106px;
+     background-position:  0 -350px;
+    }
+    .news-section .download a.exper-btn{
+     height: 108px;
+     background-position:  0 -461px;
+    }
+
+    /* 入口模块 */
+    .entry-section{
+      padding: 28px 0 34px;
+      justify-content: space-between;
+    }
+    .entry-section a{
+      width: 291px;
+      height: 134px;
+      overflow: hidden;
+    }
+    .entry-section a img{
+      width: 100%;
+      transition: .4s;
+    }
+    .entry-section a:hover img{
+      transform: scale(1.1);
+    }
+
+    /* 内容模块 */
+    .section-content {
+      justify-content: space-between;
+    }
+    .section-content .left-content{
+      width: 872px;
+      height: 528px;
+    }
+  
+    /* 赛事区域*/
+    .match-center .match-news{
+      display: flex;
+      height: 260px;
+      margin: 15px 0;
+    }
+    .match-center .match-news .news-left{
+      width: 211px;
+    }
+    .match-center .match-news a:hover{
+      text-decoration: underline;
+    }
+    .match-center .match-news .news-left img{
+      width: 100%;
+    }
+    .match-center .match-news .news-right{
+      flex: 1;
+      padding-left: 20px;
+      overflow: hidden;
+    }
+    .match-center .news-right .title{
+      display: block;
+      padding-right: 80px;
+      font-size: 24px;
+      color: #333;
+    }
+    .match-center .news-right .subtitle{
+      margin-bottom: 10px;
+      padding-right: 160px;
+      font-size: 14px;
+      color: #666;
+    }
+    .match-center .match-news-list li{
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 10px;
+    }
+    .match-center .match-news-list li a{
+      padding-right: 20px;
+      flex: 1;
+    }
+    .match-center .match-news-list li .date{
+      color:  #b8b9c5;
+    }
+   
+
+    /* 内容右边模块 */
+    .section-content .right-content{
+      width: 295px;
+      height: 528px;
+    }
+    .right-content .new-hero{
+    margin: 19px 0 10px;
+    width: 294px;
+    /* height: 224px */
+    }
+    .right-content .hreo-skin .new-hero a{
+        display: block;
+    }
+    .right-content .hreo-skin .new-hero a img{
+        width: 100%;
+    }
+    .right-content .hreo-skin .desc{
+        padding: 10px 15px;
+        height: 68px;
+        border: 1px solid #e5e5e5;
+        border-top: none;
+        border-radius: 0 0 2px 2px;
+    }
+    .right-content .hreo-skin .hreo-name{
+        font-size: 18px;
+    }
+    .right-content .hreo-skin .date{
+        font-size: 12px;
+        color: #999;
+    }
+    .right-content .hreo-skin .hero-list{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+    }
+    .right-content .hreo-skin .hero-list .pic{
+        position: relative;
+        width: 68px;
+        height: 173px;
+    }
+    .right-content .hreo-skin  .pic .mask{
+        display: flex;
+        opacity: 0;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        justify-content: center;
+        align-items: center;
+        color: #f3c258;
+        writing-mode: vertical-lr;
+        background-color: rgba(0,0,0,.88);
+        transition: .5s;
+    }
+    .right-content .hreo-skin  .pic:hover .mask{
+        opacity: 1;
+    }
+
+    
+    .right-content .kpl-schedule .schedule-time{
+        width: 100%;
+        text-align: center;
+        border-collapse: collapse;
+    }
+    .right-content .kpl-schedule .schedule-time thead tr{
+        height: 32px;
+        line-height: 32px;
+        background-color: #f5f5f5;
+        color: #999;
+    }
+    .right-content .kpl-schedule .schedule-time tbody tr{
+      border-bottom: 1px solid #e5e5e5;
+    }
+    .right-content .kpl-schedule .schedule-time tbody .pic{
+        margin-bottom: 3px;
+    }
+    .right-content .kpl-schedule .schedule-time tbody img{
+        width: 25px;
+        height: 25px;
+    }
+    .right-content .kpl-schedule .schedule-time tbody td{
+        width: 25px;
+        height: 25px;
+        padding: 10px 0;
+        font-size: 12px;
+        
+    }
+    .right-content .kpl-schedule .schedule-time tbody td:nth-child(3){
+        font-size: 14px;
+        color: #f3c258;
+    }
+
+    .right-content .kpl-schedule .match-schedule{
+      display: block;
+      margin-top: 20px;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="main main_wraper">
+
+    <!-- news模块 -->
+    <div class="news-section flex">
+      <div class="banner">
+        <ul class="banner-top flex">
+          <li>
+            <a href="##" class="item">
+              <img src="./upload/banner01.jpeg" alt="">
+            </a>
+          </li>
+          <li>
+            <a href="##" class="item">
+              <img src="./upload/banner01.jpeg" alt="">
+            </a>
+          </li>
+          <li>
+            <a href="##" class="item">
+              <img src="./upload/banner01.jpeg" alt="">
+            </a>
+          </li>
+          <li>
+            <a href="##" class="item">
+              <img src="./upload/banner01.jpeg" alt="">
+            </a>
+          </li>
+          <li>
+            <a href="##" class="item">
+              <img src="./upload/banner01.jpeg" alt="">
+            </a>
+          </li>
+        </ul>
+        <div class="banner-bottom flex">
+          <a href="#" class="item active">夏侯惇的目标</a>
+          <a href="#" class="item">夏侯惇的目标</a>
+          <a href="#" class="item">夏侯惇的目标</a>
+          <a href="#" class="item">夏侯惇的目标</a>
+          <a href="#" class="item">夏侯惇的目标</a>
+        </div>
+      </div>
+      <div class="news">
+        <div class="title-news flex">
+          <a href="##" class="active">热门</a>
+          <a href="##">新闻</a>
+          <a href="##">公告</a>
+          <a href="##">活动</a>
+          <a href="##">赛事</a>
+          <a href="##" class="more">...</a>
+        </div>
+        <div class="notice">
+          <a href="##">叮！新赛季攻略解读报告出炉</a>
+        </div>
+        <ul class="news-list">
+          <li class="item">
+            <a href="##" class="nowrap news_type news_type_hot">
+              关于五一劳动节假期前后未成年人游戏限玩的通知
+            </a>
+            <span>04/22</span>
+          </li>
+          <li class="item">
+            <a href="##" class="nowrap news_type news_type_notice">
+              关于五一劳动节假期前后未成年人游戏限玩的通知
+            </a>
+            <span>04/22</span>
+          </li>
+          <li class="item">
+            <a href="##" class="nowrap news_type news_type_hot">
+         
+              关于五一劳动节假期前后未成年人游戏限玩的通知
+            </a>
+            <span>04/22</span>
+          </li>
+          <li class="item">
+            <a href="##" class="nowrap news_type news_type_hot">
+             
+              关于五一劳动节假期前后未成年人游戏限玩的通知
+            </a>
+            <span>04/22</span>
+          </li>
+          <li class="item">
+            <a href="##" class="nowrap news_type news_type_hot">
+           
+              关于五一劳动节假期前后未成年人游戏限玩的通知
+            </a>
+            <span>04/22</span>
+          </li>
+          <li class="item">
+            <a href="##" class="nowrap news_type news_type_hot">
+              关于五一劳动节假期前后未成年人游戏限玩的通知
+            </a>
+            <span>04/22</span>
+          </li>
+          <li class="item">
+            <a href="##" class="nowrap news_type news_type_notice">
+              关于五一劳动节假期前后未成年人游戏限玩的通知
+            </a>
+            <span>04/22</span>
+          </li>
+        </ul>
+      </div>
+      <div class="download">
+        <a href="##" class="download-btn"></a>
+        <a href="##" class="guard-btn"></a>
+        <a href="##" class="exper-btn"></a>
+      </div>
+    </div>
+
+    <!-- 入口模块 -->
+    <div class="entry-section flex">
+      <a href="##">
+        <img src="./upload/entry_01.jpg" alt="">
+      </a>
+      <a href="##">
+        <img src="./upload/entry_01.jpg" alt="">
+      </a>
+      <a href="##">
+        <img src="./upload/entry_01.jpg" alt="">
+      </a>
+      <a href="##">
+        <img src="./upload/entry_01.jpg" alt="">
+      </a>
+    </div>
+
+    <!-- 内容模块 -->
+    <div class="section-content flex">
+      <!-- 左边-->
+      <div class="left-content">
+        <!-- 内容区域 -->
+       <div class="content-center">
+        <div class="section_header flex">
+          <h3 class="header_icon header_left">内容中心</h3>
+          <a href="##" class="header_icon header_right">更多</a>
+        </div>
+        <!-- tab栏切换 tab_control-->
+        <div class="tab_control flex">
+          <a href="##" class="tab_control_item active">精品栏目</a>
+          <span class="tab_control_line"></span>
+          <a href="##" class="tab_control_item">精品栏目</a>
+          <span class="tab_control_line"></span>
+          <a href="##" class="tab_control_item">精品栏目</a>
+        </div>
+        <!-- tab栏切换 tab_keyword-->
+        <div class="tab_keyword flex">
+          <a href="##" class="tab_keyword_item active">最新</a>
+          <a href="##" class="tab_keyword_item">马菠萝奇闻录</a>
+          <a href="##" class="tab_keyword_item">王者克制论</a>
+          <a href="##" class="tab_keyword_item">王者视角</a>
+          <a href="##" class="tab_keyword_item">侧肩搭</a>
+          <a href="##" class="tab_keyword_item">峡谷333</a>
+          <a href="##" class="tab_keyword_item">百星王者带你飞</a>
+          <a href="##" class="tab_keyword_item">狄仁杰封神榜</a>
+        </div>
+        <!-- 视频列表 -->
+        <div class="video_list flex">
+          <a href="##" class="video_list_item">
+            <div class="pic">
+              <img src="./upload/content_video_01.jfif" alt="">
+              <div class="pic_bottom flex">
+                <span class="views">440</span>
+                <span class="date">2021-04-14</span>
+              </div>
+              <div class="mask">
+                <i></i>
+              </div>
+            </div>
+            <div class="desc">
+              【荣耀大话王Ⅸ】西安WE.佩恩化身奥特曼现场演唱《奇迹再现》佩恩化身奥特曼现场演唱《奇迹再现》
+            </div>
+          </a>
+          <a href="##" class="video_list_item">
+            <div class="pic">
+              <img src="./upload/content_video_01.jfif" alt="">
+              <div class="pic_bottom flex">
+                <span class="views">440</span>
+                <span class="date">2021-04-14</span>
+              </div>
+              <div class="mask">
+                <i></i>
+              </div>
+            </div>
+            <div class="desc">
+              【荣耀大话王Ⅸ】西安WE.佩恩化身奥特曼现场演唱《奇迹再现》
+            </div>
+          </a>
+          <a href="##" class="video_list_item">
+            <div class="pic">
+              <img src="./upload/content_video_01.jfif" alt="">
+              <div class="pic_bottom flex">
+                <span class="views">440</span>
+                <span class="date">2021-04-14</span>
+              </div>
+              <div class="mask">
+                <i></i>
+              </div>
+            </div>
+            <div class="desc">
+              【荣耀大话王Ⅸ】西安WE.佩恩化身奥特曼现场演唱《奇迹再现》
+            </div>
+          </a>
+          <a href="##" class="video_list_item">
+            <div class="pic">
+              <img src="./upload/content_video_01.jfif" alt="">
+              <div class="pic_bottom flex">
+                <span class="views">440</span>
+                <span class="date">2021-04-14</span>
+              </div>
+              <div class="mask">
+                <i></i>
+              </div>
+            </div>
+            <div class="desc">
+              【荣耀大话王Ⅸ】西安WE.佩恩化身奥特曼现场演唱《奇迹再现》
+            </div>
+          </a>
+          <a href="##" class="video_list_item">
+            <div class="pic">
+              <img src="./upload/content_video_01.jfif" alt="">
+              <div class="pic_bottom flex">
+                <span class="views">440</span>
+                <span class="date">2021-04-14</span>
+              </div>
+              <div class="mask">
+                <i></i>
+              </div>
+            </div>
+            <div class="desc">
+              【荣耀大话王Ⅸ】西安WE.佩恩化身奥特曼现场演唱《奇迹再现》
+            </div>
+          </a>
+          <a href="##" class="video_list_item">
+            <div class="pic">
+              <img src="./upload/content_video_01.jfif" alt="">
+              <div class="pic_bottom flex">
+                <span class="views">440</span>
+                <span class="date">2021-04-14</span>
+              </div>
+              <div class="mask">
+                <i></i>
+              </div>
+            </div>
+            <div class="desc">
+              【荣耀大话王Ⅸ】西安WE.佩恩化身奥特曼现场演唱《奇迹再现》
+            </div>
+          </a>
+          <a href="##" class="video_list_item">
+            <div class="pic">
+              <img src="./upload/content_video_01.jfif" alt="">
+              <div class="pic_bottom flex">
+                <span class="views">440</span>
+                <span class="date">2021-04-14</span>
+              </div>
+              <div class="mask">
+                <i></i>
+              </div>
+            </div>
+            <div class="desc">
+              【荣耀大话王Ⅸ】西安WE.佩恩化身奥特曼现场演唱《奇迹再现》
+            </div>
+          </a>
+          <a href="##" class="video_list_item">
+            <div class="pic">
+              <img src="./upload/content_video_01.jfif" alt="">
+              <div class="pic_bottom flex">
+                <span class="views">440</span>
+                <span class="date">2021-04-14</span>
+              </div>
+              <div class="mask">
+                <i></i>
+              </div>
+            </div>
+            <div class="desc">
+              【荣耀大话王Ⅸ】西安WE.佩恩化身奥特曼现场演唱《奇迹再现》
+            </div>
+          </a>
+
+        </div>
+
+       </div>
+
+       <!-- 赛事区域 -->
+       <div class="match-center">
+         <!-- 头部区域 -->
+        <div class="section_header flex">
+          <h3 class="header_icon header_left header_left_macth">赛事中心</h3>
+          <a href="##" class="header_icon header_right">更多</a>
+        </div>
+        <div class="tab_control flex">
+          <a href="##" class="tab_control_item active item2">KPL</a>
+          <span class="tab_control_line"></span>
+          <a href="##" class="tab_control_item item2">挑战杯赛</a>
+          <span class="tab_control_line"></span>
+          <a href="##" class="tab_control_item item2">精品栏目</a>
+          <span class="tab_control_line"></span>
+          <a href="##" class="tab_control_item item2">挑战杯赛</a>
+          <span class="tab_control_line"></span>
+          <a href="##" class="tab_control_item item2">挑战杯赛</a>
+          <span class="tab_control_line"></span>
+          <a href="##" class="tab_control_item item2">TGA</a>
+          <span class="tab_control_line"></span>
+          <a href="##" class="tab_control_item item2">微信游戏邀请赛</a>
+          <span class="tab_control_line"></span>
+        </div>
+
+        <!-- 比赛新闻区域 -->
+        <div class="match-news">
+          <a href="##" class="news-left">
+            <img src="./upload/match.jpg" alt="">
+          </a>
+          <div class="news-right">
+            <a href="##" class="nowrap title">K甲季后赛回顾：镇江VTG、火豹会师总决赛，MD止步四强</a>
+            <p class="nowrap subtitle">2022年K甲春季赛季后赛为期一周的比赛已经全部结束了：新秀MD位居四强；老牌劲旅CW斩获季军，镇江VTG和火豹冲进总决赛。一起来回顾下本周的精彩比赛吧！</p>
+            <ul class="match-news-list">
+              <li>
+                <i class="news_type_match">高校联赛</i>
+                <a href="##" class="nowrap  ">
+                  王者荣耀校园行走进中山大学，名师分享共讨教学经济时代的体育营销
+                </a>
+                <span class="date">12-30</span>
+              </li>
+              <li>
+                <i class="news_type_match">高校联赛</i>
+                <a href="##" class="nowrap  ">
+                  王者荣耀校园行走进中山大学，名师分享共讨教学经济时代的体育营销
+                </a>
+                <span class="date">12-30</span>
+              </li>
+              <li>
+                <i class="news_type_match">高校联赛</i>
+                <a href="##" class="nowrap  ">
+                  王者荣耀校园行走进中山大学，名师分享共讨教学经济时代的体育营销
+                </a>
+                <span class="date">12-30</span>
+              </li>
+              <li>
+                <i class="news_type_match">高校联赛</i>
+                <a href="##" class="nowrap  ">
+                  王者荣耀校园行走进中山大学，名师分享共讨教学经济时代的体育营销
+                </a>
+                <span class="date">12-30</span>
+              </li>
+              <li>
+                <i class="news_type_match">高校联赛</i>
+                <a href="##" class="nowrap  ">
+                  王者荣耀校园行走进中山大学，名师分享共讨教学经济时代的体育营销
+                </a>
+                <span class="date">12-30</span>
+              </li>
+              <li>
+                <i class="news_type_match">高校联赛</i>
+                <a href="##" class="nowrap  ">
+                  王者荣耀校园行走进中山大学，名师分享共讨教学经济时代的体育营销
+                </a>
+                <span class="date">12-30</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+         <!-- 视频列表 -->
+         <div class="video_list flex">
+          <a href="##" class="video_list_item">
+            <div class="pic">
+              <img src="./upload/content_video_01.jfif" alt="">
+              <div class="pic_bottom flex">
+                <span class="views">440</span>
+                <span class="date">2021-04-14</span>
+              </div>
+              <div class="mask">
+                <i></i>
+              </div>
+            </div>
+            <div class="desc">
+              【荣耀大话王Ⅸ】西安WE.佩恩化身奥特曼现场演唱《奇迹再现》佩恩化身奥特曼现场演唱《奇迹再现》
+            </div>
+          </a>
+          <a href="##" class="video_list_item">
+            <div class="pic">
+              <img src="./upload/content_video_01.jfif" alt="">
+              <div class="pic_bottom flex">
+                <span class="views">440</span>
+                <span class="date">2021-04-14</span>
+              </div>
+              <div class="mask">
+                <i></i>
+              </div>
+            </div>
+            <div class="desc">
+              【荣耀大话王Ⅸ】西安WE.佩恩化身奥特曼现场演唱《奇迹再现》
+            </div>
+          </a>
+          <a href="##" class="video_list_item">
+            <div class="pic">
+              <img src="./upload/content_video_01.jfif" alt="">
+              <div class="pic_bottom flex">
+                <span class="views">440</span>
+                <span class="date">2021-04-14</span>
+              </div>
+              <div class="mask">
+                <i></i>
+              </div>
+            </div>
+            <div class="desc">
+              【荣耀大话王Ⅸ】西安WE.佩恩化身奥特曼现场演唱《奇迹再现》
+            </div>
+          </a>
+          <a href="##" class="video_list_item">
+            <div class="pic">
+              <img src="./upload/content_video_01.jfif" alt="">
+              <div class="pic_bottom flex">
+                <span class="views">440</span>
+                <span class="date">2021-04-14</span>
+              </div>
+              <div class="mask">
+                <i></i>
+              </div>
+            </div>
+            <div class="desc">
+              【荣耀大话王Ⅸ】西安WE.佩恩化身奥特曼现场演唱《奇迹再现》
+            </div>
+          </a>
+          <a href="##" class="video_list_item">
+            <div class="pic">
+              <img src="./upload/content_video_01.jfif" alt="">
+              <div class="pic_bottom flex">
+                <span class="views">440</span>
+                <span class="date">2021-04-14</span>
+              </div>
+              <div class="mask">
+                <i></i>
+              </div>
+            </div>
+            <div class="desc">
+              【荣耀大话王Ⅸ】西安WE.佩恩化身奥特曼现场演唱《奇迹再现》
+            </div>
+          </a>
+          <a href="##" class="video_list_item">
+            <div class="pic">
+              <img src="./upload/content_video_01.jfif" alt="">
+              <div class="pic_bottom flex">
+                <span class="views">440</span>
+                <span class="date">2021-04-14</span>
+              </div>
+              <div class="mask">
+                <i></i>
+              </div>
+            </div>
+            <div class="desc">
+              【荣耀大话王Ⅸ】西安WE.佩恩化身奥特曼现场演唱《奇迹再现》
+            </div>
+          </a>
+          <a href="##" class="video_list_item">
+            <div class="pic">
+              <img src="./upload/content_video_01.jfif" alt="">
+              <div class="pic_bottom flex">
+                <span class="views">440</span>
+                <span class="date">2021-04-14</span>
+              </div>
+              <div class="mask">
+                <i></i>
+              </div>
+            </div>
+            <div class="desc">
+              【荣耀大话王Ⅸ】西安WE.佩恩化身奥特曼现场演唱《奇迹再现》
+            </div>
+          </a>
+          <a href="##" class="video_list_item">
+            <div class="pic">
+              <img src="./upload/content_video_01.jfif" alt="">
+              <div class="pic_bottom flex">
+                <span class="views">440</span>
+                <span class="date">2021-04-14</span>
+              </div>
+              <div class="mask">
+                <i></i>
+              </div>
+            </div>
+            <div class="desc">
+              【荣耀大话王Ⅸ】西安WE.佩恩化身奥特曼现场演唱《奇迹再现》
+            </div>
+          </a>
+
+        </div>
+       </div>
+      </div>
+      <!-- 右边区域 -->
+      <div class="right-content">
+        <!-- 赛事英雄 -->
+       <div class="hreo-skin">
+        <div class="section_header flex">
+          <h3 class="header_icon header_left header_left_hero">赛事/英雄</h3>
+          <a href="##" class="header_icon header_right">更多</a>
+        </div>
+        <!-- tab栏切换 tab_control-->
+        <div class="tab_control flex">
+          <a href="##" class="tab_control_item active">最新英雄</a>
+          <span class="tab_control_line"></span>
+          <a href="##" class="tab_control_item">最新皮肤</a>
+          <span class="tab_control_line"></span>
+          <a href="##" class="tab_control_item">周免英雄</a>
+        </div>
+
+        <div class="new-hero">
+          <a href="##"><img src="./upload/new_hero01.webp" alt=""></a>
+          <div class="desc">
+            <h3 class="hreo-name">新英雄：桑启</h3>
+            <p class="date">上线时间：2022.04.14</p>
+          </div>
+        </div>
+
+        <div class="hero-list">
+          <a href="##" class="pic">
+            <img src="./upload/new_hero02.webp" alt="">
+            <div class="mask">金蝉</div>
+          </a>
+          <a href="##" class="pic">
+            <img src="./upload/new_hero03.jpg" alt="">
+            <div class="mask">金蝉</div>
+          </a>
+          <a href="##" class="pic">
+            <img src="./upload/new_hero02.webp" alt="">
+            <div class="mask">金蝉</div>
+          </a>
+          <a href="##" class="pic">
+            <img src="./upload/new_hero03.jpg" alt="">
+            <div class="mask">金蝉</div>
+          </a>
+        </div>
+       </div>
+
+       <!-- 战队比赛安排 -->
+       <div class="kpl-schedule">
+        <div class="section_header flex">
+          <h3 class="header_icon header_left header_left_kpl">KPL赛程</h3>
+          <a href="##" class="header_icon header_buy">购票</a>
+          <a href="##" class="header_icon header_right">更多</a>
+        </div>
+        <table class="schedule-time">
+          <thead>
+            <tr>
+              <td>时间</td>
+              <td>战队</td>
+              <td></td>
+              <td>战队</td>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>4-26 19:00</td>
+              <td>
+                <div class="pic">
+                  <img src="./upload/team01.png" alt="">
+                </div>
+                佛山KG
+              </td>
+              <td>VS</td>
+              <td>
+                <div class="pic">
+                  <img src="./upload/team01.png" alt="">
+                </div>
+                佛山KG
+              </td>
+            </tr>
+            <tr>
+              <td>4-26 19:00</td>
+              <td>
+                <div class="pic">
+                  <img src="./upload/team01.png" alt="">
+                </div>
+                佛山KG
+              </td>
+              <td>VS</td>
+              <td>
+                <div class="pic">
+                  <img src="./upload/team01.png" alt="">
+                </div>
+                佛山KG
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <a class="match-schedule">
+          <img src="./upload/match_schedule.webp" alt="">
+        </a>
+       </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
